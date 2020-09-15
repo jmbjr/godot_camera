@@ -1,0 +1,46 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "AsepriteImportData",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/AsepriteImportData.gd"
+}, {
+"base": "Node",
+"class": "AsepriteImporter",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/AsepriteImporter.gd"
+}, {
+"base": "Node",
+"class": "EditorTheme",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/EditorTheme.gd"
+} ]
+_global_script_class_icons={
+"AsepriteImportData": "",
+"AsepriteImporter": "",
+"EditorTheme": ""
+}
+
+[application]
+
+config/name="camera"
+run/main_scene="res://game.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "aseprite_importer" )
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+environment/default_environment="res://default_env.tres"
